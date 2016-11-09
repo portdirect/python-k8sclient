@@ -36,18 +36,18 @@ Steps to generate Kubernetes client code for v1:
     git clone https://github.com/openstack/python-k8sclient.git
 
 * Clone the swagger-codegen repo. It is recommended to checkout a release
- (e.g. v2.1.3) instead of using the master branch::
+ (e.g. v2.2.1) instead of using the master branch::
 
     git clone https://github.com/swagger-api/swagger-codegen.git
     cd swagger-codegen/
-    git checkout tags/v2.1.3
+    git checkout tags/v2.2.1
 
 * Build swagger-codegen::
 
     mvn package
 
 * Update the v1.json from latest Kubernetes release::
-  curl -o ./k8sclient/templates/v1.json https://raw.githubusercontent.com/kubernetes/kubernetes/v1.2.2/api/swagger-spec/v1.json
+  curl -o ./k8sclient/templates/v1.json https://raw.githubusercontent.com/kubernetes/kubernetes/v1.4.0/api/swagger-spec/v1.json
 
 * Run below command to generate the API client code for Kubernetes::
 
